@@ -24,13 +24,28 @@ function App() {
 
     setTodos([...todos, todoObject]);
   }
+
+  // DeleteTodo - function that takes an id and deletes the todo with that id
+
+  // ToggleComplete - function that takes an id and toggles the isCompleted property of the todo with that id
+  function toggleComplete(id) {
+    setTodos(todos.map(todo => {
+      if(todo.id === id) {
+        return {
+          ...todo,
+          isCompleted: !todo.isCompleted
+        }
+      }
+      return todo;
+    }))
+  }
   
   return (
     <div className='container'>
       <div className="inner-container">
         <Header />
         <TodoForm addTodo={addTodo} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} toggleComplete={toggleComplete} />
       </div>
     </div>
   )
