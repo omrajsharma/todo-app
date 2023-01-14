@@ -1,7 +1,7 @@
 import React from 'react'
 import './Todo.css'
 
-function Todo({todo, toggleComplete}) {
+function Todo({todo, toggleComplete, deleteTodo}) {
   return (
     <div className='todo-container'>
       <input 
@@ -21,6 +21,12 @@ function Todo({todo, toggleComplete}) {
         <p>
           {todo.date}
         </p>
+      </div>
+
+      <div className='todo-delete'>
+        <button onClick={() => deleteTodo(todo.id)}>
+          ❌
+        </button>
       </div>
     </div>
   )

@@ -27,6 +27,20 @@
     color: #999;
 }
 
+.todo-delete {
+    position: absolute;
+    top: -4px;
+    right: 1px;
+}
+.todo-delete button {
+    cursor: pointer;
+    border: none;
+    background-color: none;
+}
+.todo-delete button:hover {
+    border: 1px solid red;
+    transition: .1s ease-in-out ;
+}
 
 
 

@@ -26,6 +26,9 @@ function App() {
   }
 
   // DeleteTodo - function that takes an id and deletes the todo with that id
+  function deleteTodo(id) {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
 
   // ToggleComplete - function that takes an id and toggles the isCompleted property of the todo with that id
   function toggleComplete(id) {
@@ -45,7 +48,11 @@ function App() {
       <div className="inner-container">
         <Header />
         <TodoForm addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} />
+        <TodoList 
+        todos={todos} 
+        toggleComplete={toggleComplete} 
+        deleteTodo={deleteTodo}
+        />
       </div>
     </div>
   )
