@@ -5,6 +5,7 @@
 **Steps to setup**
 ```
 git clone https://github.com/omrajsharma/todo-app.git
+cd todo-app
 npm i
 npm run dev
 ```
